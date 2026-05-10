@@ -33,7 +33,7 @@ cd productivity-app
 composer install
 cp .env.example .env
 php artisan key:generate
-touch database/database.sqlite   # if using SQLite (see DATABASE_URL in .env)
+touch database/database.sqlite   # SQLite: file path comes from DB_DATABASE in .env (defaults to database/database.sqlite)
 php artisan migrate
 npm ci
 npm run build
